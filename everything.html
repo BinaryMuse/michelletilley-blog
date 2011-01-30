@@ -1,0 +1,14 @@
+---
+layout: default
+title: Everything
+---
+
+<h1>Everything</h1>
+
+<div id="home">
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><div class="date">{{ post.date | date, "%b %d, %Y" }}</div><div class="title"><a href="{{ post.url }}">{{ post.title }}</a></div></li>
+    {% endfor %}
+  </ul>
+</div>

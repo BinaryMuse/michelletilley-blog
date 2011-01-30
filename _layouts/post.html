@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="title">{{ page.title }}</h1>
+  <div class="when">Posted {{ page.date | date, "%A, %B %d, %Y at %I:%M %p" }}</div>
+
+  <div class="content">
+    {{ content }}
+  </div>
+</div>
+
+<hr />
+
+<script>
+var idcomments_acct = 'e087904fb3ac9155f59465e476d9c141';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>

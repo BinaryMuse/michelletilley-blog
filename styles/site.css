@@ -1,0 +1,166 @@
+* {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vollkorn', Helvetica, Arial, sans-serif;
+  margin-bottom: 50px;
+}
+
+div#container {
+  width: 900px;
+  position: relative;
+  left: 50%;
+  margin-left: -450px;
+}
+
+#header {
+  margin-bottom: 35px;
+}
+
+#header h1, #header h2 {
+  font-family: 'Ubuntu', arial, sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+#header h1 {
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+
+#header h2 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#header ul li {
+  display: inline;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div#home ul.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+}
+
+div#home ul.posts li {
+  margin-bottom: 10px;
+}
+
+div#home ul.posts div.date {
+  width: 200px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 24px;
+  vertical-align: top;
+}
+
+div#home ul.posts div.title {
+  width: 650px;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 24px;
+  vertical-align: top;
+}
+
+div.post h1, div.post h2, div.post h3, div.post h4, div.post h5, div.post h6, div.post div.when {
+  font-family: 'Cuprum', arial, sans-serif;
+  font-weight: normal;
+}
+
+div.post h1.title {
+  font-size: 36px;
+  border-bottom: 1px solid black;
+  margin-bottom: 3px;
+}
+
+div.post div.content {
+  padding-left: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+div.post div.content h1 {
+  font-size: 32px;
+}
+
+div.post {
+  margin-bottom: 50px;
+}
+
+div.post div.content h1, div.post div.content h2, div.post div.content h3, 
+div.post div.content h4, div.post div.content h5, div.post div.content h6,
+div.post div.content p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.CodeRay {
+  font-size: 14px;
+}
+
+table.CodeRay {
+  border: 1px solid #C0C0C0;
+  background-color: #def;
+}
+
+table.CodeRay td.line_numbers {
+  padding-right: 5px;
+  color: gray;
+  text-align: right;
+  border-right: 1px solid #C0C0C0;
+}
+
+table.CodeRay td.code {
+  margin-right: 5px;
+  background-color: #F8F8F8;
+  color: gray;
+  overflow: auto;
+}
+
+div#page_nav {
+  text-align: center;
+  font-size: 125%;
+}
+
+code {
+  display: inline-block;
+  font-size: 12pt;
+  border: 1px solid #DEDEDE;
+  background-color: #F8F8FF;
+  padding: 0 2.4px;
+}
+
+div.post pre {
+  font-size: 10pt;
+  overflow: auto;
+}
+
+div.gist-meta {
+  padding: 5px ! important;
+  margin: 0px ! important;
+  font-size: 8pt ! important;
+
+}
