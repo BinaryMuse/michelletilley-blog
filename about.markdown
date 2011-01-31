@@ -1,10 +1,7 @@
 ---
-layout: default
-title: About
+layout: page
+title: About Me
 ---
-
-About Me
-========
 
 For some reason, I always find "About Me" pages hard to start. It seems like
 it really shouldn't be that way; after all, who knows me as well as me?

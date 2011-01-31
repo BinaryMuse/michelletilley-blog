@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: page
 title: Contact Me
 ---
-
-Contact Me
-==========
 
 It's always good to hear from fellow geeks and other readers of my blog.
 Feel free to contact me via any of these methods:
