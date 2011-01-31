@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gist Tag for Jekyll
-date: 2011-02-01 11:38:00
+date: 2011-01-31 00:00:00
 description: Easily include Gists in your Jekyll posts, including noscript support.
 ---
 
