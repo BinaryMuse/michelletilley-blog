@@ -112,9 +112,9 @@ div.post {
 
 div.post div.content h1, div.post div.content h2, div.post div.content h3, 
 div.post div.content h4, div.post div.content h5, div.post div.content h6,
-div.post div.content p {
+div.post div.content p, div.post div.content blockquote {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .CodeRay {
@@ -150,7 +150,9 @@ code {
   font-size: 12pt;
   border: 1px solid #DEDEDE;
   background-color: #F8F8FF;
-  padding: 0 2.4px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 0;
 }
 
 div.post pre {
@@ -166,4 +168,11 @@ div.gist-meta {
 
 div.post blockquote {
   color: #555;
+}
+
+.gist .line {
+  margin: 1px;
+  /*letter-spacing: 0.1px;*/
+  line-height: 1;
+  height: 15px;
 }
