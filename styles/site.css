@@ -162,5 +162,8 @@ div.gist-meta {
   padding: 5px ! important;
   margin: 0px ! important;
   font-size: 8pt ! important;
+}
 
+div.post blockquote {
+  color: #555;
 }
