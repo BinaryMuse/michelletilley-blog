@@ -41,4 +41,4 @@ Use the following code at the top of your unicorn.rb file to tell Unicorn to set
 
 **Step 5: Start your service**
 
-Now you should be able to start your Unicorn app via `sudo service start` appname.
+Now you should be able to start your Unicorn app via `sudo service start appname`.
