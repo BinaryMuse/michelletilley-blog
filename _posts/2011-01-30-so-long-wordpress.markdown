@@ -1,6 +1,6 @@
 ---
 layout: post
-title: So Long, Wordpress
+title: So Long, WordPress
 date: 2011-01-30 11:44:00
 description: 'Waving "goodbye" to WordPress as I move to Jekyll.'
 ---
