@@ -11,11 +11,15 @@ Email
 
 You can send your email to brandon [at] brandontilley [dot] com.
 
-Social Networks
----------------
+GitHub
+------
 
-Social networking isn't my primary form of communication, but I do try to
-keep up with [my Facebook profile](http://www.facebook.com/profile.php?id=1017411194).
+Send me a message, follow me, or fork a project from [my GitHub profile](https://github.com/BinaryMuse).
+
+Other Social Networks
+---------------------
+
+I keep up with [my Facebook profile](http://www.facebook.com/profile.php?id=1017411194).
 You can also [find me on LinkedIn](http://www.linkedin.com/in/brandontilley).
 
 Instant Messaging
