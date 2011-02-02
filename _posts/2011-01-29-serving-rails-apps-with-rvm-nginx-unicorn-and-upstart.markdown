@@ -19,7 +19,7 @@ Installing RVM
 
 Since we'll use RVM to manage our Rubies and gemsets on the server, we'll start with a server-wide install of RVM. We'll start out by installing curl and git, if necessary, then RVM, and finally the other packages RVM asks us to install. (Be sure to pay attention to these; you can view them again via `rvm notes`. You may need to install additional packages for your distro of Linux or for the Rubies you wish to use). I'm using Ruby 1.9.2-p136 here.
 
-We'll also take care to add the current user to the 'rvm' group (substitute _yourusername_ for the username of the current user). Finally, we'll create a user called 'unicorn' to own our test application, later.
+We'll also take care to add the current user to the 'rvm' group. Finally, we'll create a user called 'unicorn' to own our test application, later.
 
 {% gist 802568 00_rvm.sh %}
 
