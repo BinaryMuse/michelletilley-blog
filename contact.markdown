@@ -27,11 +27,11 @@ Instant Messaging
 
 Feel free to send me an IM on any of these networks:
 
-* MSN: codemaster@rpgds.net
-* Yahoo!: rpg2kworld
-* AIM: TheCodemaster007
-* Google Talk: codemaster007@gmail.com
-* Skype: BinaryMuse
+* MSN: <a href="msnim:chat?contact=codemaster@rpgds.net">codemaster@rpgds.net</a>
+* Yahoo!: <a href="ymsgr:sendIM?rpg2kworld">rpg2kworld</a>
+* AIM: <a href="aim:goim?screenname=TheCodemaster007">TheCodemaster007</a>
+* Google Talk: <a href="gtalk:chat?jid=codemaster007@gmail.com">codemaster007@gmail.com</a>
+* Skype: <a href="skype:BinaryMuse?chat">BinaryMuse</a>
 
 (I seem to have collected several different screen names over the past
 several years... a couple of those screen names are probably about ten years
