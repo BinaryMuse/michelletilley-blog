@@ -10,12 +10,12 @@ li {
 body {
   margin: 0;
   padding: 0;
-  font-family: corbel, 'lucida grande', helvetica, sans-serif;
+  font-family: 'Lato', corbel, 'lucida grande', helvetica, sans-serif;
   margin-bottom: 50px;
 }
 
 .when {
-  font-family: corbel, 'lucida grande', helvetica, sans-serif;
+  font-family: 'Lato', corbel, 'lucida grande', helvetica, sans-serif;
   font-size: 15px;
   margin-bottom: 15px;
 }
@@ -61,6 +61,7 @@ div#container {
   display: inline;
   margin-left: 5px;
   margin-right: 5px;
+  font-size: 18px;
 }
 
 div#home ul.posts {
@@ -92,17 +93,20 @@ div#home ul.posts div.title {
 }
 
 div.post h1.title {
-  font-family: 'Cuprum', arial, sans-serif;
+  font-family: 'Yanone Kaffeesatz', arial, sans-serif;
   font-size: 34px;
   border-bottom: 1px solid black;
   margin-bottom: 3px;
+  font-weight: normal;
+  letter-spacing: 1.2;
 }
 
 div.post div.content {
   padding-left: 10px;
   font-size: 18px;
-  line-height: 1.5;
-  letter-spacing: 0.1px;
+  line-height: 1.6;
+  letter-spacing: 0.25px;
+  word-spacing: 1.2;
 }
 
 div.post div.content h1 {
@@ -113,11 +117,18 @@ div.post {
   margin-bottom: 50px;
 }
 
-div.post div.content h1, div.post div.content h2, div.post div.content h3, 
+div.post div.content h1, div.post div.content h2, div.post div.content h3,
 div.post div.content h4, div.post div.content h5, div.post div.content h6,
 div.post div.content p, div.post div.content blockquote {
   margin-top: 10px;
   margin-bottom: 15px;
+}
+
+div.post div.content h1, div.post div.content h2, div.post div.content h3,
+div.post div.content h4, div.post div.content h5, div.post div.content h6 {
+  font-family: 'Yanone Kaffeesatz', arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: 1.2;
 }
 
 .CodeRay {
