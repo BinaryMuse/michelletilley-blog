@@ -92,6 +92,11 @@ div#home ul.posts div.title {
   vertical-align: top;
 }
 
+div#home ul.posts div.title .small {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
 div.post h1.title {
   font-family: 'Yanone Kaffeesatz', arial, sans-serif;
   font-size: 34px;
