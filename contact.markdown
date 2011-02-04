@@ -3,8 +3,7 @@ layout: page
 title: Contact Me
 ---
 
-It's always good to hear from fellow geeks and other readers of my blog.
-Feel free to contact me via any of these methods:
+It's always good to hear from fellow geeks and other readers of my blog. Feel free to contact me via any of these methods:
 
 Email
 =====
@@ -40,6 +39,4 @@ old or more!)
 Comments on This Site
 =====================
 
-I always read every comment on any of my blogs. Feel free to leave a comment
-on any appropriate page or post, but remember to leave a valid email address
-if you want me to be able to reach you.
+I read all comments on my blog; please feel free to join (or start!) the conversation.
