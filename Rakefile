@@ -10,8 +10,13 @@ task :preview do
   system "jekyll --server --auto"
 end
 
+desc "Build stylesheets via Sass"
+task :sass do
+  system "sass --update sass:styles"
+end
+
 desc "Build _site"
-task :build do
+task :build => :sass do
   system "jekyll"
 end
 

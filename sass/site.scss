@@ -1,0 +1,162 @@
+$title-font: 'Ubuntu', arial, sans-serif;
+$header-font: 'Yanone Kaffeesatz', arial, sans-serif;
+$body-font: 'Lato', corbel, 'lucida grande', helvetica, sans-serif;
+
+html {
+  overflow-y: scroll;
+}
+
+* {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $body-font;
+  margin-bottom: 50px;
+}
+
+.when {
+  font-family: $body-font;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+div#container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#header {
+  margin-bottom: 35px;
+  h1 {
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 44px;
+  }
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 26px;
+  }
+  h1, h2 {
+    font-family: $title-font;
+    font-weight: normal;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline;
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: 18px;
+    }
+  }
+}
+
+div#home ul.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+  li {
+    margin-bottom: 10px;
+  }
+  div.date {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 24px;
+    vertical-align: top;
+  }
+  div.title {
+    width: 650px;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 24px;
+    vertical-align: top;
+    .small {
+      font-size: 18px;
+      line-height: 1.3;
+    }
+  }
+}
+
+div.post {
+  margin-bottom: 50px;
+  h1.title {
+    font-family: $header-font;
+    font-size: 34px;
+    border-bottom: 1px solid black;
+    margin-bottom: 3px;
+    font-weight: normal;
+    letter-spacing: 1.2;
+  }
+  blockquote {
+    color: #555;
+  }
+  pre {
+    font-size: 10pt;
+    overflow: auto;
+  }
+  div.content {
+    padding-left: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    word-spacing: 1.2;
+    h1 {
+      font-size: 30px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $header-font;
+      font-weight: normal;
+      letter-spacing: 1.2;
+
+    }
+    h1, h2, h3, h4, h5, h6, p, blockquote {
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+div#page_nav {
+  text-align: center;
+  font-size: 125%;
+}
+
+code {
+  display: inline-block;
+  font-size: 12pt;
+  border: 1px solid #DEDEDE;
+  background-color: #F8F8FF;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 0;
+}
+
+div.gist-meta {
+  padding: 5px ! important;
+  margin: 0px ! important;
+  font-size: 8pt ! important;
+}
+
+.gist .line {
+  margin: 1px;
+  /*letter-spacing: 0.1px;*/
+  line-height: 1;
+  height: 15px;
+}

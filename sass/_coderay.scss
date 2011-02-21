@@ -1,0 +1,22 @@
+.CodeRay {
+  font-size: 14px;
+}
+
+table.CodeRay {
+  border: 1px solid #C0C0C0;
+  background-color: #def;
+}
+
+table.CodeRay td.line_numbers {
+  padding-right: 5px;
+  color: gray;
+  text-align: right;
+  border-right: 1px solid #C0C0C0;
+}
+
+table.CodeRay td.code {
+  margin-right: 5px;
+  background-color: #F8F8F8;
+  color: gray;
+  overflow: auto;
+}
