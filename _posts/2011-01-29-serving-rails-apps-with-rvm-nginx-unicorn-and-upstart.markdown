@@ -51,7 +51,7 @@ If you don't use Upstart, or you don't want to use Upstart, feel free to skip th
 Creating a Sample Rails Application
 ===================================
 
-Now we'll create a test Rails application in /var/www/test_app. We'll use a gemset called rails_app to demonstrate Unicorn's ability to figure out which gemset it should use for our application (for more details on this, check out step four in [my earlier post on Unicorn and Upstart](/2011/01/29/rvm-unicorn-and-upstart/)). For this to work, we'll also create an RVM wrapper for Unicorn. And, of course, don't forget your config/unicorn.rb file.
+Now we'll create a test Rails application in /var/www/test_app. We'll use a gemset called rails_app to demonstrate Unicorn's ability to figure out which gemset it should use for our application (for more details on this, check out step four in [my earlier post on Unicorn and Upstart](/2011/01/29/rvm-unicorn-and-upstart.html)). For this to work, we'll also create an RVM wrapper for Unicorn. And, of course, don't forget your config/unicorn.rb file.
 
 Again, we'll use Upstart to start and manage our Unicorn process, but you can use whatever you'd like. If you just want to test it out, try running `unicorn -c /var/www/test_app/config/unicorn.rb` from the 'global' gemset.
 
