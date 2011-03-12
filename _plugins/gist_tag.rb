@@ -39,7 +39,7 @@ module Jekyll
       return nil if @cache == false
       file = get_cache_file_for gist, file
       return nil unless File.exist?(file)
-      return File.new(file).readlines.join
+      return File.new(file).read
     end
 
     def get_cache_file_for(gist, file)
