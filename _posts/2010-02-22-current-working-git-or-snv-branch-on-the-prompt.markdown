@@ -10,7 +10,7 @@ This is a nifty tip I picked up somewhere on the Internet to show the Git or Sub
 Edit your `~/.bash_profile` to mirror the following functions. Of course, you may change the details of PS1 to your liking; it's the `\$(parse_git_branch)\$(parse_svn_branch)` that's important.
 
 
-{% gist 447949 nil %}
+{% gist 447949 DND (blog): git on prompt.sh %}
 
 And what you end up with looks like (in this particular case):
 
