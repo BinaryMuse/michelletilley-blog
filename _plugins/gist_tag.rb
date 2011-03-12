@@ -43,9 +43,10 @@ module Jekyll
     end
 
     def get_cache_file_for(gist, file)
-      gist.gsub! /[^a-zA-Z0-9\-_\.]/, ''
-      file.gsub! /[^a-zA-Z0-9\-_\.]/, ''
-      md5 = Digest::MD5.hexdigest "#{gist}-#{file}"
+      bad_chars = /[^a-zA-Z0-9\-_\.]/
+      gist      = gist.gsub bad_chars, ''
+      file      = file.gsub bad_chars, ''
+      md5       = Digest::MD5.hexdigest "#{gist}-#{file}"
       File.join @cache_folder, "#{gist}-#{file}-#{md5}.cache"
     end
 
