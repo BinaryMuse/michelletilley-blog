@@ -4,7 +4,10 @@ layout: default
 
 <div class="post">
   <h1 class="title">{{ page.title }}</h1>
-  <div class="when">Posted {{ page.date | date, "%A, %B %d, %Y at %I:%M %p" }}</div>
+  <div class="when">
+    Posted {{ page.date | date, "%A, %B %d, %Y at %I:%M %p" }}<br />
+    <fb:comments-count href="http://brandontilley.com{{ page.url }}"></fb:comments-count> <a href="#comments">comments</a>
+  </div>
 
   <div class="content">
     {{ content }}
@@ -13,10 +16,5 @@ layout: default
 
 <hr />
 
-<script>
-var idcomments_acct = 'e087904fb3ac9155f59465e476d9c141';
-var idcomments_post_id;
-var idcomments_post_url;
-</script>
-<span id="IDCommentsPostTitle" style="display:none"></span>
-<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+<h2><a name="comments" />Comments</h2>
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=200178680014727&amp;xfbml=1"></script><fb:comments href="brandontilley.com{{ page.url }}" num_posts="10" width="700"></fb:comments>

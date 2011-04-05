@@ -2,6 +2,18 @@
 <head>
   <title>{{ page.title }} | Brandon Tilley</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta property="fb:app_id" content="200178680014727" />
+  <meta property="fb:admins" content="1017411194" />
+  {% if page.url == "/" or page.url == "/index.html" %}
+  <meta property="og:type" content="blog" />
+  <meta property="og:title" content="BrandonTilley.com" />
+  <meta property="og:description" content="Musings from the mind of a geek." />
+  {% else %}
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page.title | strip_html | replace:'"','&#34;' }}" />
+  <meta property="og:description" content="{{ page.description | strip_html | replace:'"','&#34;' }}" />
+  {% endif %}
+  <meta property="og:site_name" content="BrandonTilley.com" />
   <link rel="alternate" type="application/atom+xml" title="brandontilley.com Atom Feed" href="/atom.xml" />
   <link rel="stylesheet" href="/styles/site.css" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Ubuntu|Lato|Yanone Kaffeesatz' rel='stylesheet' type='text/css' />
