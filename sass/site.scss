@@ -78,14 +78,14 @@ div#home ul.posts {
     display: inline-block;
     text-align: right;
     margin-right: 10px;
-    font-size: 24px;
+    font-size: 22px;
     vertical-align: top;
   }
   div.title {
     width: 650px;
     display: inline-block;
     margin-left: 10px;
-    font-size: 24px;
+    font-size: 22px;
     vertical-align: top;
     .small {
       font-size: 18px;
@@ -134,6 +134,7 @@ div.post {
 }
 
 div#page_nav {
+  margin-top: 25px;
   text-align: center;
   font-size: 125%;
 }
