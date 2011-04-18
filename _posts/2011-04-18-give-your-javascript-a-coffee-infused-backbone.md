@@ -33,14 +33,14 @@ Realm Model
 
 First, I created a model for a single server (aka "realm"). This model holds the name of the realm, its type, current population, whether or not the server is running, and whether or not there is a queue to play on the server. (Although it's not necessary to set defaults, as all poperties are set automatically from JSON later, I did so here.)
 
-{% gistnocache 924755 realm_model.coffee %}
+{% gist 924755 realm_model.coffee %}
 
 RealmList Collection
 --------------------
 
 Next up, I created a collection to hold a list of models. It's through this object that I fetch new data from the JSONP endpoint and update the models accordingly.
 
-{% gistnocache 924755 realmlist_model.coffee %}
+{% gist 924755 realmlist_model.coffee %}
 
 I struggled with this for a little while, as Backbone is really designed to help where CRUD and REST are in heavy use. For example, a call to `RealmList.fetch()` replaces all the models it holds with new models rather than updating the old models. This wasn't exactly what I wanted, and since I had to update the entire list of realms via JSONP every time, I did a bit of hackery to overide the collection's `refresh` function *after* the initial download.
 
@@ -51,7 +51,7 @@ Realm View
 
 Next up is the view for a single realm; that is, one instance of a server in the list.
 
-{% gistnocache 924755 realm_view.coffee %}
+{% gist 924755 realm_view.coffee %}
 
 Notice the call to `_.template` when defining the view's template. This is another Underscore method; it compiles JavaScript templates into functions that can be used later for rendering by passing in a context object to fill in values. Here, I created a hidden `div` on the page, and read that HTML in to the template. In a larger app, I would probably use [Milk](https://github.com/pvande/Milk) for rendering templates.
 
@@ -66,7 +66,7 @@ Application View
 
 Finally we get to the view for the application; while it's a bit longer than the other objects, it's actually relatively simple, mostly taking responsibility for binding various UI changes to events from the realm list.
 
-{% gistnocache 924755 app_view.coffee %}
+{% gist 924755 app_view.coffee %}
 
 It's also primary responsible for handling the search functionality for the app, iterating over the list of realms and checking to see if the name starts with the serch string, and hiding or showing the views accordingly. It does this when it receives the `filter:change` event fired from `RealmList.filter`. But how does that method know when to fire that event? The answer comes from our last object, the controller.
 
@@ -75,7 +75,7 @@ Controller
 
 The controller is analagous to the router in a traditional Rails app; it handles changes in the hash string. Here's our controller:
 
-{% gistnocache 924755 controller.coffee %}
+{% gist 924755 controller.coffee %}
 
 The controller simply takes any hash string and passes it on to the realm list, which then fires the necessary event so that the view does the filtering.
 
