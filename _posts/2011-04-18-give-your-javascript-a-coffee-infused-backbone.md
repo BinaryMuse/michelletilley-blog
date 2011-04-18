@@ -12,7 +12,7 @@ Anyway, the first time through the code, I ended up with what was essentially [a
 CoffeeScript
 ============
 
-[CoffeeScript](http://jashkenas.github.com/coffee-script/) is "a little language that compiles into JavaScript." It offers a syntax remenescent of Ruby and a few other niceties that make writing JavaScript a lot easier and more fun (in my opinion).
+[CoffeeScript](http://jashkenas.github.com/coffee-script/) is "a little language that compiles into JavaScript." It offers a syntax reminiscent of Ruby and a few other niceties that make writing JavaScript a lot easier and more fun (in my opinion).
 
 I bring it up in this post because code samples later will utilize it. For the basics, check out [the overview](http://jashkenas.github.com/coffee-script/#overview)--it should be plenty to allow you to grok the code in this post.
 
