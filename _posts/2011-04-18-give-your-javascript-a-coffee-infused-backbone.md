@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Give Your JavaScript a Coffee-Infused Backbone
-date: 2011-04-18 12:00:00
+date: 2011-04-18 07:55:00
 description: Learn how to utilize CoffeeScript and Backbone.js to clean up your JavaScript spaghetti.
 ---
 
