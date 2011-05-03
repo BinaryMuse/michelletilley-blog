@@ -5,9 +5,7 @@ date: 2011-04-18 07:55:00
 description: Learn how to utilize CoffeeScript and Backbone.js to clean up your JavaScript spaghetti.
 ---
 
-Recently I was working on a little [demo web app](https://github.com/BinaryMuse/wow-realm-status-js) that involved completely client-side code. My JavaScript-fu isn't the greatest; in fact, you might say that I know jQuery, not JavaScript (and even that's pushing it). I've done a bit of Node.js recently, but other than that, I'm pretty wet behind the JavaScript ears.
-
-Anyway, the first time through the code, I ended up with what was essentially [a bunch of jQuery statements](https://github.com/BinaryMuse/wow-realm-status-js/blob/f34e70dbace182df4b3cc83fd2f9d663e3031123/js/app.js#files) strewn about. It worked, but it wasn't really very pretty. I decided that it was time that I learn how to do something about it. I ended up with two neat tools: **CoffeeScript** and **Backbone**.
+Recently I was working on a little [demo web app](https://github.com/BinaryMuse/wow-realm-status-js) that involved completely client-side code. My JavaScript-fu is the weaker of my multi-lingual toolbox, although I've been working on it more recently (with more client-side experiments, such as this one, as well as projects in Node.js). Anyway, the first time through the code, I ended up with what was essentially [a bunch of jQuery statements](https://github.com/BinaryMuse/wow-realm-status-js/blob/f34e70dbace182df4b3cc83fd2f9d663e3031123/js/app.js#files) strewn about. It worked, but it wasn't really very pretty. I decided that it was time that I learn how to do something about it. I ended up with two neat tools: **CoffeeScript** and **Backbone**.
 
 CoffeeScript
 ============
