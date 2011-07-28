@@ -15,6 +15,7 @@ GEM
     maruku (0.6.0)
       syntax (>= 1.0.0)
     rake (0.8.7)
+    sass (3.1.5)
     syntax (1.0.0)
 
 PLATFORMS
@@ -24,3 +25,4 @@ DEPENDENCIES
   jekyll
   kramdown
   rake
+  sass
