@@ -2,3 +2,4 @@ _site/*
 _gist_cache/*
 .sass-cache/*
 styles/*
+!**/.gitkeep
