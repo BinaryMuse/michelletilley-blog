@@ -3,3 +3,4 @@ _gist_cache/*
 .sass-cache/*
 styles/*
 !**/.gitkeep
+.bundle/*
