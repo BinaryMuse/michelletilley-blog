@@ -6,8 +6,8 @@ end
 
 desc "Preview _site in a browser"
 task :preview do
-  system "open 'http://localhost:4000'"
-  system "jekyll --server --auto"
+  system "bundle exec launchy 'http://localhost:4000'"
+  system "bundle exec jekyll --server --auto"
 end
 
 desc "Build stylesheets via Sass"
@@ -17,7 +17,7 @@ end
 
 desc "Build _site"
 task :build => :sass do
-  system "jekyll"
+  system "bundle exec jekyll"
 end
 
 desc "Sync _site"
