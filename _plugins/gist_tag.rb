@@ -59,7 +59,7 @@ module Jekyll
 
     def get_gist_from_web(gist, file)
       gist_url          = get_gist_url_for gist, file
-      raw_uri           = URI.parse gist_url
+      raw_uri           = URI.parse URI.encode(gist_url)
       https             = Net::HTTP.new raw_uri.host, raw_uri.port
       https.use_ssl     = true
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
