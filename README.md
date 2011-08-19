@@ -5,4 +5,4 @@ This is my blog, driven by [Jekyll](https://github.com/mojombo/jekyll). Nothing 
 
     {% gist gist-number file-name %}
 
-It will write the Gist embed JavaScript code, and also download the raw code from GitHub and display it inside a `<noscript>` block for RSS readers and browsers with JavaScript disabled. The contents of the Gists are cached in `_gist_cache` for subsequent builds, and can be cleared with `rake cache:clear`. For more details on the tag, check out [the blog post all about it](http://brandontilley.com/2011/01/31/gist-tag-for-jekyll.html).
+It will write the Gist embed JavaScript code, and also download the raw code from GitHub and display it inside a `<noscript>` block for RSS readers and browsers with JavaScript disabled. The contents of the Gists are cached in `_gist_cache` for subsequent builds, and can be cleared with `rake cache:clear`. For more details on the tag, check out [the blog post all about it](http://brandontilley.com/2011/01/30/gist-tag-for-jekyll.html).
