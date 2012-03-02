@@ -15,7 +15,7 @@ Next up, we need to send a `0` or `1` byte to the Arduino from Node; here's a sh
 
 {% gist 1962067 01-blink.coffee %}
 
-From here, it's not difficult to adapt this example into a more complete sample including a web server. Here's a complete listing of my program, including a web to access at the root URL to control the LED using jQuery Ajax requests.
+From here, it's not difficult to adapt this example into a more complete sample including a web server. Here's a complete listing of my program, including a web page to access at the root URL to control the LED using jQuery Ajax requests.
 
 {% gist 1962067 02-server.coffee %}
 
