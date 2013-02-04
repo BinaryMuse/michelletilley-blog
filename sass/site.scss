@@ -151,18 +151,23 @@ code {
   margin: 0;
 }
 
-div.gist-meta {
-  padding: 5px ! important;
-  margin: 0px ! important;
-  font-size: 8pt ! important;
+noscript pre code {
+  display: block;
 }
 
-.gist, pre {
-  word-spacing: 0;
-}
+.gist {
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-.gist .line {
-  margin: 1px;
-  line-height: 1;
-  height: 15px;
+  .line-numbers, .line-data {
+    padding: 0;
+    margin: 0;
+  }
+
+  .line-number, .line {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-size: 14px;
+  }
 }
