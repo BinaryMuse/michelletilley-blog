@@ -5,7 +5,7 @@ layout: default
 <div class="post">
   <h1 class="title">{{ page.title }}</h1>
   <div class="when">
-    Posted {{ page.date | date, "%A, %B %d, %Y" }}<br />
+    Posted {{ page.date | date: "%A, %B %d, %Y" }}<br />
     <fb:comments-count href="http://brandontilley.com{{ page.url }}"></fb:comments-count> <a href="#comments">comments</a><br />
     <fb:like href="http://brandontilley.com{{ page.url }}" layout="button_count" show_faces="true" width="450" font=""></fb:like>
   </div>

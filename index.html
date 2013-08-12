@@ -6,7 +6,7 @@ title: Index
 <div id="home">
   <ul class="posts">
     {% for post in paginator.posts %}
-      <li><div class="date">{{ post.date | date, "%b %d, %Y" }}</div><div class="title"><span class="large"><a href="{{ post.url }}">{{ post.title }}</a></span><br />
+      <li><div class="date">{{ post.date | date: "%b %d, %Y" }}</div><div class="title"><span class="large"><a href="{{ post.url }}">{{ post.title }}</a></span><br />
         <span class="small">{{ post.description }}</span></div></li>
     {% endfor %}
   </ul>
