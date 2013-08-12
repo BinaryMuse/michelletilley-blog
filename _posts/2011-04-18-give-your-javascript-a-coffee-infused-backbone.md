@@ -24,7 +24,7 @@ While Backbone is a JavaScript application framework, it doesn't include a widge
 My App
 ------
 
-My application was a [World of Warcraft server status page](http://binarymuse.net/misc/wow-realm-status-js/) designed to demonstrate some new API's that Blizzard is providing. I wanted it to be able to show the current status of every server (fetched via JSONP and refreshed every five minutes) and I wanted the list to be searchable with an input box on the page. Let's take a look at the various pieces of the app.
+My application was a [World of Warcraft server status page](http://binarymuse.github.io/wow-realm-status-js/) designed to demonstrate some new API's that Blizzard is providing. I wanted it to be able to show the current status of every server (fetched via JSONP and refreshed every five minutes) and I wanted the list to be searchable with an input box on the page. Let's take a look at the various pieces of the app.
 
 Realm Model
 -----------
