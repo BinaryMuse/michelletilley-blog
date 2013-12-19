@@ -6,7 +6,7 @@ server_port: 4000
 source:      .
 destination: ./_site
 plugins:     ./_plugins
-exclude:     README.md
+exclude:     README.md, vendor
 
 future:      true
 lsi:         false
@@ -21,7 +21,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
-  
+
   coderay:
     coderay_wrap: div
     coderay_line_numbers: table
