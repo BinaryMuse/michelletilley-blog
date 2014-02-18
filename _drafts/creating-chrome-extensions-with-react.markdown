@@ -4,12 +4,12 @@ title: Creating Chrome Extensions with React
 description: "I recently built a Chrome extension using Facebook's React."
 ---
 
-If you're into client-side web development to any extent, you've probably heard of Facebook's [React](http://facebook.github.io/react/index.html) library (or maybe you've just been living under a rock). Recently, I was working on a Chrome extension, and decided to see how well React fit in to the development I was doing. (Spoiler: quite well.) This post is not meant to be a general overview of or a basic tutorial for React, but rather a brief survey of some of the interesting things I learned while building the application.
+If you're into client-side web development to any extent, you've probably heard of Facebook's [React](http://facebook.github.io/react/index.html) library (or maybe you've just been living under a rock). Recently, I was working on a Chrome extension, and decided to see how well React fit in to the development I was doing. (Spoiler alert: it fit in quite well.) This post is not meant to be a general overview of or a basic tutorial for React, but rather a brief survey of some of the interesting things I learned while building the application.
 
 The Extension
 =============
 
-For reference, the extension I built with React is called [Fast Tab Switcher](https://github.com/BinaryMuse/chrome-fast-tab-switcher), which I made for people who, like myself, don't seem to know how to close a tab. The extension allows users to hit a keystroke and pop open a window that shows all their currently open tabs; users can then filter the tabs with a text box, and press enter to switch to the currently selected entry. All the code is available [on GitHub](https://github.com/BinaryMuse/chrome-fast-tab-switcher), and the extension can also be installed from [the Chrome Web Store](https://chrome.google.com/webstore/detail/fast-tab-switcher/jkhfenkikopkkpboaipgllclaaehgpjf).
+For reference, the extension I built with React is called [Fast Tab Switcher](https://github.com/BinaryMuse/chrome-fast-tab-switcher), which I made for people who, like myself, don't seem to know how to close browser tabs, and subsequently can't find the one they're looking for. The extension allows users to hit a keystroke and pop open a window that shows all their currently open tabs; users can then filter the tabs with a text box, and press enter to switch to the currently selected entry. All the code is available [on GitHub](https://github.com/BinaryMuse/chrome-fast-tab-switcher), and the extension can also be installed from [the Chrome Web Store](https://chrome.google.com/webstore/detail/fast-tab-switcher/jkhfenkikopkkpboaipgllclaaehgpjf).
 
 <a href='/images/fast-tab-switcher-ss.png' target='_blank'>
 <img src='/images/fast-tab-switcher-ss.png' style='max-width: 100%' alt='Screenshot'>
