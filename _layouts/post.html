@@ -7,12 +7,14 @@ layout: default
   <div class="when">
     Posted {{ page.date | date: "%A, %B %d, %Y" }}<br />
     <fb:comments-count href="http://brandontilley.com{{ page.url }}"></fb:comments-count> <a href="#comments">comments</a><br />
-    <div style='display: inline-block; vertical-align: top;'>
-      <fb:like href="http://brandontilley.com{{ page.url }}" layout="button_count" show_faces="true" width="450" font=""></fb:like>
-    </div>
-    <div style='display: inline-block; vertical-align: top; margin-top: 15px; margin-left: 10px;'>
-      <a href="https://twitter.com/share" class="twitter-share-button"></a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div style='height: 70px;'>
+      <div style='display: inline-block; vertical-align: top;'>
+        <fb:like href="http://brandontilley.com{{ page.url }}" layout="button_count" show_faces="true" width="450" font=""></fb:like>
+      </div>
+      <div style='display: inline-block; vertical-align: top; margin-top: 15px; margin-left: 10px;'>
+        <a href="https://twitter.com/share" class="twitter-share-button"></a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
     </div>
   </div>
 
