@@ -15,7 +15,7 @@ For reference, the extension I built with React is called [Fast Tab Switcher](ht
 <img src='/images/fast-tab-switcher-ss.png' style='max-width: 100%' alt='Screenshot'>
 </a>
 
-The extension is built using [Browserify](http://browserify.org/) (and [Reactify](https://github.com/andreypopp/reactify), for the JSX transformation), which allows us to build code using Node.js style `require`s and `module.exports`...s.
+I chose to use [Browserify](http://browserify.org/) (and [Reactify](https://github.com/andreypopp/reactify), for the JSX transformation) to build this application, which allows us to build code using Node.js style `require`s and `module.exports`...s. It's not required for building this kind of app, but having access to Node packages and tooling is a nice win. Check out [the build scripts](https://github.com/BinaryMuse/chrome-fast-tab-switcher/tree/master/scripts) I used to build the Browserified bundles (`build.sh` builds one time then exits, `watch.sh` watches for changes in the sources files and compiles continuously).
 
 React's Big Idea
 ================
@@ -45,7 +45,7 @@ From this point on, I'll be assuming you know at least a little about how to use
 Anatomy of an Extension
 =======================
 
-Just kidding, we're not waiting on those guys. They'll catch up.
+Just kidding, we're not really waiting on them. They'll catch up.
 
 Chrome allows extensions to run in a couple different contexts; one, called a [background page](http://developer.chrome.com/extensions/background_pages.html) (or an [event page](http://developer.chrome.com/extensions/event_pages.html), depending on how you use it), allows you to run code in the background. Most often, this can simply be a script, instead of a full on HTML document. The source for ours is in `src/js/background.js`.
 
@@ -62,22 +62,28 @@ When the page loads, it runs our Browserified client bundle, the entry point of 
 
 {% gist 7dc242ebd829c8ac0020 client.jsx %}
 
-All of our React components are exported via `module.exports` so we can require them for use in any parent components. Here, we're simply asking React to render a top-level `TabSwitcher` component, attaching it to our `div`. We could also have just started with the `TabSwitcher` as our application's entry point, but I like having this small file take care of that responsibility.
+All of our React components are exported via `module.exports` so we can require them for use in any parent components. Here, we're simply asking React to render a top-level `TabSwitcher` component, attaching it to our `div`.
 
 The TabSwitcher
 ---------------
 
-This is where it really gets interesting. Here's what the `TabSwitcher` component looks like. I've left out a lot of the internals so we can focus on a high-level overview:
+This is where it really gets interesting. Here's what the `TabSwitcher` component looks like. I've left out a lot of the internals so we can focus on a high-level overview; [see the full source on GitHub](https://github.com/BinaryMuse/chrome-fast-tab-switcher/blob/master/src/js/client/tab_switcher.jsx).
 
 {% gist 7dc242ebd829c8ac0020 tab_switcher_highlevel.jsx %}
 
-When the component boots, it runs `getInitialState` to---you guessed it!---get its initial state. We can then refer to this state throughout the component. `componentDidMount` runs after the component is mounted to the DOM; the last line, `refreshTabs`, fills in pieces of the state with data from the server... er, from the extension's event page. (Note: those two terms are, for all practical purposes, interchangable. We're communicating with an extension, but I would have made the same design decisions if I were communicating over HTTP, websockets, etc.)
+When the component boots, it runs `getInitialState` to---you guessed it!---get its initial state. We can then refer to this state throughout the component via `this.state` and modify it via `this.setState`. `componentDidMount` runs after the component is mounted to the DOM; the last line of this method, `refreshTabs()`, fills in pieces of the state with data from the server---er, from the extension's event page---by making an asynchronous request and then calling `setState` with the results. This method is called any time we get an event that indicates that we should update the list of tabs--more on that soon.
 
 {% gist 7dc242ebd829c8ac0020 tab_switcher_setstate.jsx %}
 
-It's important to note that `TabSwitcher` is the **only** component in the hierarchy that contains any mutable state or any `this.setState` calls. Similarly, it contains no logic on how to render the UI; it delegates to a few sub-components for that.
+> Note: For all practical purposes, the phrases "data from the server" and "data from the extension's even page" are interchangeable. We're communicating with an extension via a special Chrome API, but the design would be sound if we were communicating over HTTP, websockets, etc.
 
-The data each sub-component needs to display itself is passed through their properties---see, for example, the `filter`, `tabs`, and `selectedTab` properties used in the `render` function. These properties are immutable; if a child component needs to change the application's state due to the user's interaction, it uses the `bus` (which is simply a Node.js [EventEmitter](http://nodejs.org/api/events.html#events_class_events_eventemitter)) to notify the `TabSwitcher` that something happened. The `TabSwitcher` modifies the appropriate state and then React *re-renders the entire component tree in memory*, using intelligent diffing to only modify the browser's DOM in places that actually need changing.
+An important consideration in this design is that `TabSwitcher` is the **only** component in the hierarchy that contains any mutable state or any `this.setState` calls. Similarly, it contains no logic on how to render the UI; it delegates to a few sub-components for that.
+
+The data each sub-component needs to display itself is passed through their properties---specifically, the `filter`, `tabs`, and `selectedTab` properties.
+
+{% gist 7dc242ebd829c8ac0020 tab_switcher_render.jsx %}
+
+These properties are immutable; if a child component needs to change the application's state due to the user's interaction, it uses the `bus` (which is simply a Node.js [EventEmitter](http://nodejs.org/api/events.html#events_class_events_eventemitter), made available to us on the client side by Browserify) to notify the `TabSwitcher` that something happened. The `TabSwitcher` modifies the appropriate state and then React *re-renders the entire component tree in memory*, using intelligent diffing to only modify the browser's DOM in places that actually need changing.
 
 <a href='/images/react_chrome_extension_diagram.png' target='_blank'>
 <img src='/images/react_chrome_extension_diagram.png' style='max-width: 100%' alt='Data Flow'>
@@ -85,7 +91,7 @@ The data each sub-component needs to display itself is passed through their prop
 
 <small>*Data only flows from top to bottom; only `TabSwitcher` contains any mutable state*</small>
 
-One thing that I've left out here: if there was any chance that our components would be mounted and unmounted during the application's lifecycle, we would need to deregister any event bus listeners for that component during its `componentWillUnmount` lifecycle hook. I've not done that here, as the same components are always mounted, but it's something to be aware of if you use this pattern in your own apps.
+> One thing that I've left out here: if there was any chance that our components would be mounted and unmounted during the application's lifecycle, we would need to [deregister any event bus listeners](http://nodejs.org/api/events.html#events_emitter_removelistener_event_listener) for that component during its `componentWillUnmount` lifecycle hook. I've not done that here, as the same components are always mounted, but it's something to be aware of if you use this pattern in your own apps.
 
 ### Let's Take a Closer Look
 
@@ -103,13 +109,13 @@ Next, the `change:filter` event handler for the bus in `TabSwitcher` fires, call
 
 *This* is where the state change happens; we set the filter to the string that was sent to us via the event, and once that's set we get the newly filtered tabs and set the currently selected tab to the first one in that list.
 
-These changes to the state automatically flow into the properties of the child components, which React "renders" in memory. If it detects the actual browser DOM is out of sync with this in-memory model, it then and *only* then performs the slow DOM operations necessary to bring it up to date.
+Changes made to the state via `setState` trigger an in-memory "render" of the component tree by React, and the new values in the state automatically flow into the child components via their properties. If React detects the actual browser DOM is out of sync with this in-memory model, it then and *only* then performs the relatively slow DOM manipulation operations necessary to bring it up to date.
 
-If you're used to a framework with built-in two-way data binding, it can take a while to migrate your mindset to this style of decoupled components. The effort can be worth it, though; these two ideas---allowing the UI state of your application to be defined as a graph of idempotent functions that rely on variables they own, and centralizing state changes to once place, communicating with messages---makes it *extremely* easy to reason about your components. In fact, if you look at the other components in the extension, you'll notice they're very short, and do very little; the most complex logic you'll see is determining how to format a particular string, or which event to fire based on which key the user pressed.
+If you're used to a framework with built-in two-way data binding, it can take a while to migrate your mindset to this style of decoupled components. The effort can be worth it, though; these two ideas---allowing the UI state of your application to be defined as a tree of idempotent functions that rely on variables they own, and centralizing state changes to once place, communicating with messages---makes it *extremely* easy to reason about your components. In fact, if you look at the other components in the extension, you'll notice they're very short, and do very little; the most complex logic you'll see is determining how to format a particular string, or which event to fire based on which key the user pressed.
 
 Conclusion
 ==========
 
-Of course, this isn't the only way to build a React app. I won't even claim it's the best (I'm a far cry from an expert on React), but it worked well for me in this situation. Each component is quite cohesive, yet highly decoupled--with access to the event bus and their properties, they'll still work no matter where in the component graph they live.
+Of course, this isn't the only way to build a React app. The React team recommends passing callbacks to child components via properties. I've always been partial to evented systems, and this strategy seemed to work well in this case. Each component is quite cohesive, yet highly decoupled--with access to the event bus and their properties, they'll still work even if their position in the component tree changes.
 
 Have you built anything using React? What patterns did you use? Share it with us in the comments!
