@@ -6,7 +6,7 @@ destination: ./_site
 plugins:     ./_plugins
 exclude:     [README.md, vendor]
 
-future:      true
+future:      false
 lsi:         false
 pygments:    false
 markdown:    kramdown
