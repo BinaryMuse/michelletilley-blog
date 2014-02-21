@@ -19,6 +19,10 @@
   <meta property="og:description" content="{{ page.description | strip_html | replace:'"','&#34;' }}" />
   {% endif %}
   <meta property="og:site_name" content="BrandonTilley.com" />
+  <script>document.createElement("gist");</script>
+  <style>
+  gist {display: inline;}
+  </style>
 </head>
 <body>
 <div id="container">
@@ -36,6 +40,39 @@
 {{ content }}
 
 </div>
+
+
+<script>
+(function(){
+    var gists = document.getElementsByTagName('gist');
+    function embed(id, file, i, tag) {
+        window['embed_gist_'+i] = function(gist) {
+            var tmp = document.createElement('div');
+            tmp.innerHTML = gist.div;
+            tag.parentNode.replaceChild(tmp.firstChild, tag);
+        };
+        var url = 'https://gist.github.com/'+id+'.json?callback=embed_gist_'+i;
+        if(file) {
+            url += '&file='+file;
+        }
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        document.head.appendChild(script);
+        tag.innerHTML = "<div class='gist'><div class='gist-file'><div class='gist-meta'>" +
+          "<img src='/images/github-mark.png' width='16' height='16' style='margin: 0; float: right;'> " +
+          "Loading <a href='#'>" + file + "</a> from GitHub..." +
+          "</div></div></div>"
+    }
+    for(var i=0; i<gists.length; i++) {
+        var id = gists[i].getAttribute('data-id');
+        var file = gists[i].getAttribute('data-file');
+        if(id) {
+            embed(id, file, i, gists[i]);
+        }
+    }
+})();
+</script>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];

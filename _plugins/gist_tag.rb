@@ -14,26 +14,24 @@ module Jekyll
 
     def render(context)
       if parts = @text.match(/([a-f\d]*) (.*)/)
-        gist, file = parts[1].strip, parts[2].strip
-        script_url = script_url_for gist, file
-        code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
-        html_output_for script_url, code
+        gist_id, file = parts[1].strip, parts[2].strip
+        code          = get_cached_gist(gist_id, file) || get_gist_from_web(gist_id, file)
+        html_output_for gist_id, file, code
       else
         ""
       end
     end
 
-    def html_output_for(script_url, code)
+    def html_output_for(gist_id, file, code)
       code = CGI.escapeHTML code
-      "<script src='#{script_url}'></script><noscript><pre><code>#{code}</code></pre></noscript>"
-    end
-
-    def script_url_for(gist_id, filename)
-      "https://gist.github.com/#{gist_id}.js?file=#{filename}"
+      "<gist data-id='#{gist_id}' data-file='#{file}'></gist>" +
+        "<noscript><pre><code>#{code}</code></pre>" +
+        "<div><small><em><a href='https://gist.github.com/#{gist_id}'>View Gist " +
+        "for <code>#{file}</code> on GitHub</a></em></small></div></noscript>"
     end
 
     def get_gist_url_for(gist, file)
-      "https://gist.github.com/BinaryMuse/#{gist}/raw/#{file}"
+      "https://gist.githubusercontent.com/BinaryMuse/#{gist}/raw/#{file}"
     end
 
     def cache(gist, file, data)
