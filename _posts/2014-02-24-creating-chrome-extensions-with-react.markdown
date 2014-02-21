@@ -17,9 +17,9 @@ For reference, the extension I built with React is called [Fast Tab Switcher](ht
 </a>
 </div>
 
-> Note: If a lot of time has passed since I wrote this post and the code has changed, you can always get to the original code at [commit `asdfasdf`]().
+> Note: If a lot of time has passed since I wrote this post and the code has changed, you can always get to the original code at [the v1.0.1 tag](https://github.com/BinaryMuse/chrome-fast-tab-switcher/tree/v1.0.1). All the links to source files will point to this tag.
 
-I chose to use [Browserify](http://browserify.org/) (and [Reactify](https://github.com/andreypopp/reactify), for the JSX transformation) to build this application, which allows us to build code using Node.js style `require`s and `module.exports`...s. It's not required for building this kind of app, but having access to Node packages and tooling is a nice win. Check out [the build scripts](https://github.com/BinaryMuse/chrome-fast-tab-switcher/tree/master/scripts) I used to build the Browserified bundles (`build.sh` builds one time then exits, `watch.sh` watches for changes in the source files and compiles continuously).
+I chose to use [Browserify](http://browserify.org/) (and [Reactify](https://github.com/andreypopp/reactify), for the JSX transformation) to build this application, which allows us to build code using Node.js style `require`s and `module.exports`...s. It's not required for building this kind of app, but having access to Node packages and tooling is a nice win. Check out [the build scripts](https://github.com/BinaryMuse/chrome-fast-tab-switcher/tree/v1.0.1/scripts) I used to build the Browserified bundles (`build.sh` builds one time then exits, `watch.sh` watches for changes in the source files and compiles continuously).
 
 React's Big Idea
 ================
@@ -53,7 +53,7 @@ Just kidding, we're not really waiting on them. They'll catch up.
 
 Chrome allows extensions to run code in a couple different contexts; one, called a [background page](http://developer.chrome.com/extensions/background_pages.html) (or an [event page](http://developer.chrome.com/extensions/event_pages.html), depending on how you use it), allows you to run code in the background. Most often, this can simply be a script, instead of a full on HTML document. The source for ours is in `src/js/background.js`.
 
-The event page in our extension is basically responsible for two things: opening the tab switcher when the user presses the extension's keyboard shortcut, and responding to messages sent from the client (one for querying the list of currently open tabs and one for asking the extension to switch to a given tab). Since we're focusing on React in this post, we'll gloss over the details; check out [the source](https://github.com/BinaryMuse/chrome-fast-tab-switcher/blob/master/src/js/background.js) if you're curious!
+The event page in our extension is basically responsible for two things: opening the tab switcher when the user presses the extension's keyboard shortcut, and responding to messages sent from the client (one for querying the list of currently open tabs and one for asking the extension to switch to a given tab). Since we're focusing on React in this post, we'll gloss over the details; check out [the source](https://github.com/BinaryMuse/chrome-fast-tab-switcher/blob/v1.0.1/src/js/background.js) if you're curious!
 
 The Client
 ==========
@@ -71,7 +71,7 @@ All of our React components are exported via `module.exports` so we can require 
 The TabSwitcher
 ---------------
 
-This is where it really gets interesting. Here's what the `TabSwitcher` component looks like. I've left out a lot of the internals so we can focus on a high-level overview; [see the full source on GitHub](https://github.com/BinaryMuse/chrome-fast-tab-switcher/blob/master/src/js/client/tab_switcher.jsx).
+This is where it really gets interesting. Here's what the `TabSwitcher` component looks like. I've left out a lot of the internals so we can focus on a high-level overview; [see the full source on GitHub](https://github.com/BinaryMuse/chrome-fast-tab-switcher/blob/v1.0.1/src/js/client/tab_switcher.jsx).
 
 {% gist 7dc242ebd829c8ac0020 tab_switcher_highlevel.jsx %}
 
@@ -99,7 +99,7 @@ These properties are immutable; if a child component needs to change the applica
 
 Let's look at the data flow a bit more closely. As an example, let's look at what happens when the user types something in the input box, indicating their desire to filter the list of tabs to ones that match their query.
 
-First, in [the `TabSearchBox` component](https://github.com/BinaryMuse/chrome-fast-tab-switcher/blob/master/src/js/client/tab_search_box.jsx), we have an `onChange` event listener that fires when the user changes the text.
+First, in [the `TabSearchBox` component](https://github.com/BinaryMuse/chrome-fast-tab-switcher/blob/v1.0.1/src/js/client/tab_search_box.jsx), we have an `onChange` event listener that fires when the user changes the text.
 
 {% gist 7dc242ebd829c8ac0020 tab_search_box_eventflow.jsx %}
 
