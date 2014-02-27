@@ -18,4 +18,8 @@ Since packages are also [written using HTML, CSS and JavaScript](https://github.
 
 Really, since it's all Chromium under the hood, the sky is the limit. Imagine the cool code visualization tools you could build using Canvas or WebGL. [D3](http://d3js.org/) and [Three.js](http://threejs.org/) in my editor? Yes, please!
 
+Plus, what editor lets you do this with two lines of code? :)
+
+![Oops!](/images/atom_flipped.png)
+
 In short, I feel Atom takes the Emacs mode of thinking---that your editor should be just as malleable as the code you write with it---and presents it in a fresh, modern way, ready to take on the web-based world. Give it a shot if you haven't already; sign up for a beta invite [over at atom.io](http://atom.io/).
