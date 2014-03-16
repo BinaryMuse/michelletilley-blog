@@ -79,7 +79,7 @@ When the component boots, it runs `getInitialState` to---you guessed it!---get i
 
 {% gist 7dc242ebd829c8ac0020 tab_switcher_setstate.jsx %}
 
-> Note: For all practical purposes, the phrases "data from the server" and "data from the extension's even page" are interchangeable. We're communicating with an extension via a special Chrome API, but the design would be sound if we were communicating over HTTP, websockets, etc.
+> Note: For all practical purposes, the phrases "data from the server" and "data from the extension's event page" are interchangeable. We're communicating with an extension via a special Chrome API, but the design would be sound if we were communicating over HTTP, websockets, etc.
 
 An important consideration in this design is that `TabSwitcher` is the **only** component in the hierarchy that contains any mutable state or any `this.setState` calls. Similarly, it contains no logic on how to render the UI; it delegates to a few sub-components for that.
 
