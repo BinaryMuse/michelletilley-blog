@@ -3,25 +3,25 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Brandon Tilley</title>
- <link href="http://brandontilley.com/atom.xml" rel="self" />
- <link href="http://brandontilley.com/" />
+
+ <title>Michelle Tilley</title>
+ <link href="http://michelletilley.net/atom.xml" rel="self" />
+ <link href="http://michelletilley.net/" />
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://brandontilley.com/</id>
+ <id>http://michelletilley.net/</id>
  <author>
-   <name>Brandon Tilley</name>
-   <email>brandon@brandontilley.com</email>
+   <name>Michelle Tilley</name>
+   <email>michelle@michelletilley.net</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://brandontilley.com{{ post.url }}"/>
+   <link href="http://michelletilley.net{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://brandontilley.com{{ post.id }}</id>
+   <id>http://michelletilley.net{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
- 
+
 </feed>

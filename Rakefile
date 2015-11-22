@@ -22,7 +22,7 @@ end
 
 desc "Sync _site"
 task :sync do
-  system "rsync -vzr --delete _site/ muse:/var/www/vhosts/brandontilley.com/httpdocs/"
+  system "rsync -vzr _site/ muse:/var/www/vhosts/michelletilley.net/httpdocs/"
   puts "_site synced"
 end
 
