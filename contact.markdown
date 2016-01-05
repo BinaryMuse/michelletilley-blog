@@ -35,8 +35,7 @@ You may find me wandering around [Stack Overflow][so-profile] or [related sites]
 Other Social Networks
 =====================
 
-I keep up with [my Facebook profile](https://www.facebook.com/michelle.k.tilley).
-You can also [find me on LinkedIn](http://www.linkedin.com/in/michellektilley).
+I keep up with [my Facebook profile](https://www.facebook.com/michelle.k.tilley). I also have [a Twitter profile](https://twitter.com/BinaryMuse). You can also [find me on LinkedIn](http://www.linkedin.com/in/michellektilley).
 
 Instant Messaging
 =================
