@@ -15,6 +15,13 @@ GitHub
 
 Send me a message, follow me, or fork a project from [my GitHub profile](https://github.com/BinaryMuse).
 
+Codementor
+==========
+
+I offer code mentoring services [on Codementor](https://www.codementor.io/binarymuse). Feel free to reach out to me there if you're interested.
+
+<a href="https://www.codementor.io/binarymuse?utm_source=github&utm_medium=button&utm_term=binarymuse&utm_campaign=github"><img src="https://cdn.codementor.io/badges/i_am_a_codementor_dark.svg" alt="I am a codementor" style="max-width:100%"/></a>
+
 Stack Overflow
 ==============
 
