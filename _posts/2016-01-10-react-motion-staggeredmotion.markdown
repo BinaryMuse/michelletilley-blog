@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using React Motion's StaggeredMotion for Staggered Animations
-date: 2015-01-10 14:39:00
+date: 2016-01-10 14:39:00
 description: Learn how to achieve Nash Vail's excellent staggered animation effect using React Motion's StaggeredMotion component.
 ---
 
