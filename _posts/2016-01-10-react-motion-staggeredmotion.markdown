@@ -37,8 +37,8 @@ The magic here happens in `nextStyles`, where the array of final styles is calcu
 
 * The first item in the array is the "leader" element and all the other values are based off it. So, if we're working with the 0-indexed item, just return our final style.
 * Each other item in the array is calculated by looking at the previous element (i.e. the button before it).
-  * If the previous button has animated more than 30% of the way to completion, start our own animation by returning our goal value.
-  * If the previous button has not yet animated more than 30% of the way to completion, just stay where we were last iteration.
+  * If the previous button has animated more than 20% of the way to completion, start our own animation by returning our goal value.
+  * If the previous button has not yet animated more than 20% of the way to completion, just stay where we were last iteration.
 
 Now that we can teach `StaggeredMotion` how to "animate" over our 0-to-100% value, we can use it to calculate the correct styles for each component based on the current completion percentage.
 
