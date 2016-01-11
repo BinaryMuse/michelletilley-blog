@@ -25,7 +25,7 @@ First, I changed the function that calculates the final position of each button 
 
 So, if `percent` is 0, then the button won't move at all, and if `percent` is 1, then the button will fully move to its final destination.
 
-Next, I removed `initialChildButtonStyles` and `finalChildButtonStyles` and replaced them with a method that could be used to calculate the style for a child button at any completion percentage:
+Next, I removed `mainButtonStyles`, `initialChildButtonStyles`, and `finalChildButtonStyles` and replaced them with methods that could be used to calculate the style for a button at any completion percentage, including rotation:
 
 {% gist 9431d5cecc3d57c4c317 index_02.js %}
 
@@ -44,7 +44,7 @@ Now that we can teach `StaggeredMotion` how to "animate" over our 0-to-100% valu
 
 {% gist 9431d5cecc3d57c4c317 index_04.js %}
 
-And that's that! The final effect looks like this (with none of the polish of Nash's version):
+And that's that! With some CSS tweaks, the final effect looks like this:
 
 ![Final Staggered Animation](/images/react-motion-stagger.gif)
 
