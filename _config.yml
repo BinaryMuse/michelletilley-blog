@@ -3,12 +3,13 @@ port:        4000
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+plugins_dir: ./_plugins
+gems:        [jekyll-paginate]
 exclude:     [README.md, vendor]
 
 future:      false
 lsi:         false
-pygments:    false
+highlighter: pygments
 markdown:    kramdown
 permalink:   date
 paginate:    5
@@ -18,7 +19,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: false
 
   coderay:
     coderay_wrap: div

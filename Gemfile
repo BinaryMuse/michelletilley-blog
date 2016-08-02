@@ -1,6 +1,7 @@
 source "http://rubygems.org/"
 
 gem "jekyll"
+gem "jekyll-paginate"
 gem "kramdown"
 gem "rake"
 gem "sass"
