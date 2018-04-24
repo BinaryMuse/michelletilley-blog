@@ -15,13 +15,6 @@ GitHub
 
 Send me a message, follow me, or fork a project from [my GitHub profile](https://github.com/BinaryMuse).
 
-Codementor
-==========
-
-I offer code mentoring services [on Codementor](https://www.codementor.io/binarymuse). Feel free to reach out to me there if you're interested.
-
-<a href="https://www.codementor.io/binarymuse?utm_source=github&utm_medium=button&utm_term=binarymuse&utm_campaign=github"><img src="https://cdn.codementor.io/badges/i_am_a_codementor_dark.svg" alt="I am a codementor" style="max-width:100%"/></a>
-
 Stack Overflow
 ==============
 
@@ -36,13 +29,3 @@ Other Social Networks
 =====================
 
 I keep up with [my Facebook profile](https://www.facebook.com/michelle.k.tilley). I also have [a Twitter profile](https://twitter.com/BinaryMuse), and I post pictures [on Instagram](https://www.instagram.com/binarymuse/). You can also [find me on LinkedIn](http://www.linkedin.com/in/michellektilley).
-
-Instant Messaging
-=================
-
-Feel free to send me an IM on Google Talk at <a href="gtalk:chat?jid=michelle@michelletilley.net">michelle@michelletilley.net</a>.
-
-Comments on This Site
-=====================
-
-I read all comments on my blog; please feel free to join (or start!) the conversation.
